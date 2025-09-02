@@ -122,13 +122,13 @@ jobs:
           timeout 300 bash -c 'until curl -f ${{ env.BASE_URL }}/health; do echo "Waiting for API..."; sleep 5; done'
 
       - name: Run specific test suite
-        if: github.event.inputs.test_suite && github.event.inputs.test_suite != 'all'
+        if: ${{ github.event.inputs.test_suite && github.event.inputs.test_suite != 'all' }}
         run: npm run test:${{ github.event.inputs.test_suite }}
         env:
           CI: true
 
       - name: Run all API tests
-        if: !github.event.inputs.test_suite || github.event.inputs.test_suite == 'all'
+        if: ${{ !github.event.inputs.test_suite || github.event.inputs.test_suite == 'all' }}
         run: npm test
         env:
           CI: true
