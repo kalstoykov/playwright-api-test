@@ -107,6 +107,8 @@ npm run test:debug
 
 MIT License
 
+## Project Structure 
+<pre>
 playwright-api-tests/
 ├── package.json
 ├── playwright.config.js
@@ -138,3 +140,4 @@ playwright-api-tests/
 │   └── test-config.js
 └── reports/
     └── .gitkeep
+</pre>
