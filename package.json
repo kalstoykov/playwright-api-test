@@ -1,0 +1,25 @@
+{
+  "name": "playwright-api-tests",
+  "version": "1.0.0",
+  "description": "Playwright API testing framework",
+  "scripts": {
+    "test": "playwright test",
+    "test:api": "playwright test tests/api",
+    "test:integration": "playwright test tests/integration",
+    "test:auth": "playwright test tests/api/auth",
+    "test:users": "playwright test tests/api/users",
+    "test:health": "playwright test tests/api/health",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:ui": "playwright test --ui",
+    "report": "playwright show-report",
+    "install": "playwright install"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "dotenv": "^16.3.1"
+  },
+  "dependencies": {
+    "faker": "^6.6.6"
+  }
+}
